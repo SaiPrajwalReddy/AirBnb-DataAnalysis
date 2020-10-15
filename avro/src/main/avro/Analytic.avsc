@@ -1,0 +1,131 @@
+[{
+   "namespace": "com.data.model",
+   "type": "record",
+   "name": "Review",
+   "fields": [
+      {"name": "listingId", "type": "string"},
+      {"name": "id", "type": "string"},
+      {"name": "date", "type": "string"},
+      {"name": "reviewId", "type": "string"},
+      {"name": "reviewName", "type": "string"}
+   ]
+},
+{
+   "namespace": "com.data.model",
+   "type": "record",
+   "name": "Listing",
+   "fields": [
+      {"name": "id", "type": "string"},
+      {"name": "listingUrl", "type": "string"},
+      {"name": "scrapId", "type": "string"},
+      {"name": "lastScraped", "type": "string"},
+      {"name": "name", "type": "string"},
+	  {"name": "experiencesOffered", "type": "string"},
+	  {"name": "thumbnailUrl", "type": "string"},
+	  {"name": "mediumUrl", "type": "string"},
+	  {"name": "pictureUrl", "type": "string"},
+	  {"name": "xlPictureUrl", "type": "string"},
+	  {"name": "hostId", "type": "string"},
+	  {"name": "hostUrl", "type": "string"},
+	  {"name": "hostName", "type": "string"},
+	  {"name": "hostSince", "type": "string"},
+	  {"name": "hostLocation", "type": "string"},
+	  {"name": "hostResponceTime", "type": "string"},
+	  {"name": "hostAcceptanceRate", "type": "string"},	  
+	  {"name": "hostIsSuperHost", "type": "string"},
+	  {"name": "hostThumbNamilUrl", "type": "string"},
+	  {"name": "hostPictureUrl", "type": "string"},	  
+	  {"name": "hostNeighbourhood", "type": "string"},
+	  {"name": "hostListingCount", "type": "int"},
+	  {"name": "hostTotalListingCount", "type": "int"},
+	  {"name": "hostVerification", "type": "string"},
+	  {"name": "hostHasProfilePic", "type": "string"},
+	  {"name": "hostIdentityVerified", "type": "string"},
+	  {"name": "street", "type": "string"},
+	  {"name": "neighbourhood", "type": "string"},
+	  {"name": "neighbourhoodCleansed", "type": "string"},
+	  {"name": "neighbourhoodGroupCleansed", "type": "string"},
+	  {"name": "city", "type": "string"},
+	  {"name": "state", "type": "string"},
+	  {"name": "market", "type": "string"},
+	  {"name": "smartLocation", "type": "string"},
+	  {"name": "countryCode", "type": "string"},
+	  {"name": "country", "type": "string"},
+	  {"name": "latitude", "type": "string"},
+	  {"name": "longitude", "type": "string"},
+	  {"name": "isLocationExact", "type": "string"},
+	  {"name": "propertyType", "type": "string"},
+	  {"name": "roomType", "type": "string"},
+	  {"name": "accommodates", "type": "int"},
+	  {"name": "bathrooms", "type": "double"},
+	  {"name": "bedrooms", "type": "int"},
+	  {"name": "bed", "type": "int"},
+	  {"name": "squareFeet", "type": "int"},
+	  {"name": "price", "type": "double"},
+	  {"name": "weeklyPrice", "type": "double"},
+	  {"name": "monthlyPrice", "type": "double"},
+	  {"name": "securityDeposit", "type": "double"},
+	  {"name": "cleaningFee", "type": "double"},
+	  {"name": "guestsIncluded", "type": "int"},
+	  {"name": "extraPeople", "type": "double"},
+	  {"name": "minimumNights", "type": "int"},
+	  {"name": "maximumNights", "type": "int"},
+	  {"name": "minimumMinimumNights", "type": "int"},
+	  {"name": "maximumMinimumNights", "type": "int"},
+	  {"name": "minimumMaximumNights", "type": "int"},
+	  {"name": "maximumMaximumNights", "type": "int"},
+	  {"name": "minimumNightsAvgNtm", "type": "double"},
+	  {"name": "maximumNightsAvgNtm", "type": "double"}
+   ]
+},
+{
+   "namespace": "com.data.model",
+   "type": "record",
+   "name": "Calendar",
+   "fields": [
+      {"name": "listingId", "type": "string"},      
+      {"name": "date", "type": "string"},
+      {"name": "available", "type": "string"},
+      {"name": "price", "type": "string"},
+	  {"name": "adjusted_price", "type": "string"},
+	  {"name": "minimum_nights", "type": "string"},
+	  {"name": "maximum_nights", "type": "string"}
+   ]
+},
+{
+    "namespace": "com.data.model",
+	"type": "record",
+    "name": "DataContainer",           
+    "fields": [	      
+      {
+        "name": "Listing",
+        "doc": "Listing",
+        "type": ["null", {"type": "array", "items": "Listing"}],
+        "default": null
+      },
+      {
+        "name": "Review",
+        "doc": "Review",
+        "type": ["null", {"type": "array", "items": "Review"}],
+        "default": null
+      },
+      {
+        "name": "Calendar",
+        "doc": "Calendar",
+        "type": ["null", {"type": "array", "items": "Calendar"}],
+        "default": null
+      }
+	]
+}
+,
+{
+   "namespace": "com.data.model",
+   "type": "record",
+   "name": "Analytic",
+   "fields": [
+      {"name": "listingId", "type": "string"},
+	  {"name": "dataContainer", "type": "DataContainer"}     
+     
+   ]
+}
+]

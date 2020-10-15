@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beanio xmlns="http://www.beanio.org/2012/03"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+	<stream name="REV" format="delimited">
+		<parser>                 
+         <property name="delimiter" value="|" />      
+     	</parser>
+		<record name="Review" class="com.data.model.Review">
+			<field name="listingId" />
+			<field name="id" />
+			<field name="date" />
+			<field name="reviewId" />
+			<field name="reviewName" />			
+		</record>
+	</stream>
+	<stream name="CAL" format="delimited">
+		<parser>                 
+         <property name="delimiter" value="|" />      
+     	</parser>
+		<record name="Calendar" class="com.data.model.Calendar">
+			<field name="listingId" />			
+			<field name="date" />
+			<field name="available" />
+			<field name="price" />		
+			<field name="adjusted_price" />		
+			<field name="minimum_nights" />		
+			<field name="maximum_nights" />			
+		</record>
+	</stream>
+	<stream name="LIST" format="delimited">
+		<parser>                      
+         <property name="delimiter" value="|" />        
+     	</parser>
+		<record name="Listing" class="com.data.model.Listing">
+			<field name="id" />
+			<field name="listingUrl" />
+			<field name="scrapId" />
+			<field name="lastScraped" />
+			<field name="name" />			
+			<field name="experiencesOffered" />
+			<field name="thumbnailUrl" />
+			<field name="mediumUrl" />
+			<field name="pictureUrl" />
+			<field name="xlPictureUrl" />
+			<field name="hostId" />
+			<field name="hostUrl" />
+			<field name="hostName" />
+			<field name="hostSince" />
+			<field name="hostLocation" />			
+			<field name="hostResponceTime" />			
+			<field name="hostAcceptanceRate" />
+			<field name="hostIsSuperHost" />
+			<field name="hostThumbNamilUrl" />
+			<field name="hostPictureUrl" />
+			<field name="hostNeighbourhood" />
+			<field name="hostListingCount" />
+			<field name="hostTotalListingCount" />
+			<field name="hostVerification" />
+			<field name="hostHasProfilePic" />
+			<field name="hostIdentityVerified" />
+			<field name="street" />
+			<field name="neighbourhood" />
+			<field name="neighbourhoodCleansed" />
+			<field name="neighbourhoodGroupCleansed" />
+			<field name="city" />
+			<field name="state" />			
+			<field name="market" />
+			<field name="smartLocation" />
+			<field name="countryCode" />
+			<field name="country" />
+			<field name="latitude" />
+			<field name="longitude" />
+			<field name="isLocationExact" />
+			<field name="propertyType" />
+			<field name="roomType" />
+			<field name="accommodates" />
+			<field name="bathrooms" />
+			<field name="bedrooms" />
+			<field name="bed" />					
+			<field name="squareFeet" />
+			<field name="price" />
+			<field name="weeklyPrice" />
+			<field name="monthlyPrice" />
+			<field name="securityDeposit" />
+			<field name="cleaningFee" />
+			<field name="guestsIncluded" />
+			<field name="extraPeople" />
+			<field name="minimumNights" />
+			<field name="maximumNights" />
+			<field name="minimumMinimumNights" />
+			<field name="maximumMinimumNights" />
+			<field name="minimumMaximumNights" />
+			<field name="maximumMaximumNights" />
+			<field name="minimumNightsAvgNtm" />
+			<field name="maximumNightsAvgNtm" />			
+		</record>
+	</stream>	
+</beanio>
