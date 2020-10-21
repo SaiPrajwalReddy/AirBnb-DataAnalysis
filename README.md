@@ -24,11 +24,12 @@ Analyzing the data of AirBnb using Apache Spark
 # How do we run it?
 
 The application expects there files as input namely
-	-  Lisiting.txt : contains information about listings
-	-  Calendar.txt : contains information about the days when a listing is avalibale
-	-  Review.txt : contains information about the customer reviews for each listing.
+  -	Lisiting.txt : contains information about listings
+  -	Calendar.txt : contains information about the days when a listing is available
+  -	 Review.txt : contains information about the customer reviews for each listing
 
-spark-submit -–master yarn --jars avro-1.1.0.jar,beanio-2.1.0.jar --class HotelDataAnalysis.AirBnb.App  AirBnb-0.0.1-SNAPSHOT.jar <inputDir containing the above mentioned files> < OutputLocation >
+spark-submit -–master yarn --jars avro-1.1.0.jar,beanio-2.1.0.jar --class HotelDataAnalysis.AirBnb.App  AirBnb-0.0.1-SNAPSHOT.jar 
+<inputDir containing the above mentioned files> <OutputLocation>
 
 
 All the jars specified in the spark-submit command and the input dataset is available in this repo.
